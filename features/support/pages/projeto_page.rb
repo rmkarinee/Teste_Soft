@@ -9,6 +9,8 @@ class ProjetoPage < SitePrism::Page
     def criar_projeto
         novo_projeto.click
         nome_projeto.set('Testes')
+      #  page.all((:css, 'input[type="checkbox"]')[2]).click
+      #  page.all((:css, “input[type="checkbox"]”)[3]).click
       #  checkbox.find(:css, '[value='2']').set(false)
       #  checkbox.find(:css, '[value='3']').set(false)
         botao_criar.click

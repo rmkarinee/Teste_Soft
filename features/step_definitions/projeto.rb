@@ -4,7 +4,7 @@ Dado("que meu usuário está autenticado") do
 end
  
 Quando("eu quiser criar um projeto") do
-    @projeto.criar_projeto
+    @Projeto.criar_projeto
 end
   
 Então("eu terei um projeto para gerenciar") do
