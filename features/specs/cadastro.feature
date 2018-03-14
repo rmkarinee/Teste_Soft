@@ -4,16 +4,13 @@ Funcionalidade: Cadastro
     Dado que a pessoa entre pela primeira vez na página
     E deseja realizar o cadastro
 
-    Cenário: Cadastro realizado com sucesso
+    @cadastro
+    Esquema do Cenario: Cadastro realizado com sucesso
         Dado que a pessoa acesse a página de cadastro
-        E possui os seguintes dados:
-            |Usuário    |Teste      |
-            |Senha      |12345      |
-            |Confirmação|12345      |
-            |Nome       |Fulano     |
-            |Sobrenome  |Rodrigues  |
-            |Email      |asd@asd.com|
-        Quando faço meu cadastro
-        Então a pessoa será cadastrada
-            
-         
+        E entre com os dados necessários
+        Quando realiza seu cadastro
+        Então a pessoa saberá que está cadastrada ao ver a "<Mensagem>"
+
+        Exemplos:
+           | Mensagem                                          |
+           | Sua conta foi ativada. Você pode acessá-la agora. |

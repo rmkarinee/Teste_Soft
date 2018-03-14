@@ -1,22 +1,19 @@
+#1- Entrar no ambiente
 Dado("que a pessoa acesse a página de cadastro") do
-    visit 'http://demo.redmine.org/'
     find('.register').click
 end
-  
-Dado("possui os seguintes dados:") do |table|
-    @cadastro = table.rows_hash
+
+#2- Cadastra o usuário 
+Dado("entre com os dados necessários") do 
+    @Cadastro.input_cadastro
 end
 
-Quando("faço meu cadastro") do
-   # fill_in 'register_email', with: @cadastro['Email']
-    fill_in 'user_login', with: @cadastro['Usuário']
-    fill_in 'user_password', with: @cadastro['Senha']
-    fill_in 'user_password_confirmation', with: @cadastro['Confirmação']
-    fill_in 'user_firstname', with: @cadastro['Nome']
-    fill_in 'user_lastname', with: @cadastro['Sobrenome']
-    fill_in 'user_mail', with: @cadastro['Email']
-    sleep 5
+#2- Cadastra o usuário 
+Quando("realiza seu cadastro") do
+    find('input[name=commit]').click
 end
-Então("a pessoa será cadastrada") do
-    
+
+#3- Validação de cadastro realizado com sucesso
+Então("a pessoa saberá que está cadastrada ao ver a {string}") do |mensagem|
+    expect(page).to have_content mensagem
 end
