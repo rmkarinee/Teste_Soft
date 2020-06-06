@@ -1,4 +1,4 @@
-# Teste_Soft
+# Automacao_Demo_Redmine
 
 Projeto criado seguindo a abordagem BDD utilizando linguagem Ruby e o framework de automação de testes Capybara.
 
